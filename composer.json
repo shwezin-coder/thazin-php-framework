@@ -1,0 +1,17 @@
+{
+    "name": "shwezin-coder/thazin-php-framework",
+    "description": "This is the php mvc framework",
+    "type": "framework",
+    "autoload": {
+        "psr-4": {
+            "ShwezinCoder\\ThazinPhpFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Danielhardin",
+            "email": "danielhardin581@gmail.com"
+        }
+    ],
+    "require": {}
+}
