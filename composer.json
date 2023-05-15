@@ -4,9 +4,12 @@
     "type": "framework",
     "autoload": {
         "psr-4": {
-            "ShwezinCoder\\ThazinPhpFramework\\": "src/"
-        }
-    },
+            "Thazin\\Core\\" : "./config/",
+            "Thazin\\App\\Exceptions\\" : "./app/exceptions/",
+            "Thazin\\App\\Http\\Controllers\\" : "./app/http/controllers/"
+        },
+        "files": ["bootstrap/app.php"]
+    }, 
     "authors": [
         {
             "name": "Danielhardin",
