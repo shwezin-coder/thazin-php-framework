@@ -7,6 +7,8 @@ use Thazin\Core\View;
 use Thazin\Core\Request;
 use Thazin\Core\Response;
 use Thazin\Core\Controller;
+use Thazin\Core\DB\Database;
+
 class Router{
     public string $layout = 'main'; 
     public Request $request;
@@ -15,13 +17,15 @@ class Router{
     public Controller $controller;
     public static Router $router;
     public static string $ROOT_DIR;
+    public Database $db;
     protected array $routes = [];
-    public function __construct($rootPath)
+    public function __construct($rootPath,array $config)
     {
         $this->request = new Request();
         $this->response = new Response();
         $this->view = new View();
         $this->controller = new Controller();
+        $this->db = new Database($config['db']);
         self::$router = $this;
         self::$ROOT_DIR = $rootPath;
     }

@@ -6,7 +6,8 @@
         "psr-4": {
             "Thazin\\Core\\" : "./config/",
             "Thazin\\App\\Exceptions\\" : "./app/exceptions/",
-            "Thazin\\App\\Http\\Controllers\\" : "./app/http/controllers/"
+            "Thazin\\App\\Http\\Controllers\\" : "./app/http/controllers/",
+            "Thazin\\Core\\DB\\" : "./config/db/"
         },
         "files": ["bootstrap/app.php"]
     }, 
