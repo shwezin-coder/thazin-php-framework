@@ -17,8 +17,7 @@ class Database{
     {
         $this->createMigrationsTable();
         $appliedMigrations = $this->getAppliedMigrations();
-
-        $files = scandir(Router::$ROOT_DIR.'/migrations');
+        $files = scandir(Router::$ROOT_DIR.'/database/migrations');
         $toApplyMigrations = array_diff($files,$appliedMigrations);
         $newMigrations = [];
         foreach($toApplyMigrations AS $migration)
@@ -27,7 +26,7 @@ class Database{
             {
                 continue;
             }
-            require_once Router::$ROOT_DIR.'/migrations/'.$migration;
+            require_once Router::$ROOT_DIR.'/database/migrations/'.$migration;
             $className = pathinfo($migration,PATHINFO_FILENAME);
             $instance = new $className();
             echo $this->log("Applying Migration $migration");

@@ -1,8 +1,8 @@
 <?php 
 namespace Thazin\Core\DB;
 use Thazin\Core\Router;
-use Thazin\Core\Model;
-abstract class Entity extends Model{
+use Thazin\Core\Validation;
+abstract class Entity extends Validation{
     abstract public static function tableName() : string;
     abstract public function attributes() : array;
     abstract public static function primaryKey() : string;

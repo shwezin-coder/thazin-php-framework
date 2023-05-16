@@ -7,7 +7,9 @@
             "Thazin\\Core\\" : "./config/",
             "Thazin\\App\\Exceptions\\" : "./app/exceptions/",
             "Thazin\\App\\Http\\Controllers\\" : "./app/http/controllers/",
-            "Thazin\\Core\\DB\\" : "./config/db/"
+            "Thazin\\Core\\DB\\" : "./config/db/",
+            "Thazin\\Core\\Form\\" : "./core/form/",
+            "Thazin\\App\\Models\\" : "./app/models"
         },
         "files": ["bootstrap/app.php"]
     }, 

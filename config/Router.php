@@ -8,7 +8,6 @@ use Thazin\Core\Request;
 use Thazin\Core\Response;
 use Thazin\Core\Controller;
 use Thazin\Core\DB\Database;
-
 class Router{
     public string $layout = 'main'; 
     public Request $request;
@@ -66,14 +65,16 @@ class Router{
     }
     public function run()
     {
+      echo $this->resolve();
         try {
             echo $this->resolve();
         } catch (\Exception $e) {
+          
             $this->response->setStatusCode($e->getCode());
             echo $this->view->renderView('_error',[
                 'exception' => $e
             ]);
         }
-    }
+     }
 
 }

@@ -10,6 +10,7 @@ class user_table{
             first_name VARCHAR (255) NOT NULL,
             last_name VARCHAR (255) NOT NULL,
             status INT DEFAULT 0,
+            password TEXT NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=INNODB;";
         $db->pdo->exec($SQL);
